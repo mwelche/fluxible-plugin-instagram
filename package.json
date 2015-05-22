@@ -1,6 +1,6 @@
 {
   "name": "fluxible-plugin-instagram",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Instagram-javascript-sdk for Fluxible Applications",
   "main": "index.js",
   "scripts": {},
