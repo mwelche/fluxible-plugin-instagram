@@ -12,7 +12,10 @@
     "fluxible",
     "instagram"
   ],
-  "author": "Mathieu Welche <mathieuwelche@gmail.com>",
+  "author": {
+    "name": "Mathieu Welche",
+    "email": "mathieuwelche@gmail.com"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mwelche/fluxible-plugin-instagram/issues"
@@ -23,8 +26,17 @@
     "es6-promise": "^2.1.1"
   },
   "maintainers": [
-    "mwelche <mathieuwelche@gmail.com>"
+    {
+      "name": "mwelche",
+      "email": "mathieuwelche@gmail.com"
+    }
   ],
   "directories": {},
-  "devDependencies": {}
+  "devDependencies": {},
+  "readme": "Instagram SDK with Fluxible\n==========================\n\nPlug & play the Instagram SDK into your Fluxible App!\ninspired by fluxible-plugin-facebook\n\nFeatures\n--------\n\n * Works with webpack / browserify\n * Loads facebook SDK asynchronously (thanks to es6 Promises)\n * Shares configuration between server / client (means you can use environment variables)\n * Comes with a \"do whatever you want\" (MIT) license\n * Doesn't load SDK on server side\n\nInstall\n-------\n\nAdd the module to your fluxible project :\n\n    npm install --save fluxible-plugin-instagram\n\nAdd it to your fluxible context :\n\n```javascript\n\nimport instagramPlugin from 'fluxible-plugin-instagram';\n\napp.plug(instagramPlugin({\n    /* https://developers.facebook.com/docs/javascript/reference/FB.init/v2.3 options */\n    appId: 'xxx'\n}));\n\n```\n\nUsage\n-----\n\nAdd `getInstagramSdk` to the react's context :\n\n```\n\nApplication = provideContext(Application, {\n\n    // ...\n    \n    getInstagramSdk: React.PropTypes.func\n    \n});\n\n```\n\nFrom a component :\n\n```javascript\n\nclass FooComponent {\n    // ...\n\n    plop() {\n        this.context.getInstagramSdk().then(Instagram => {\n            // do your sdk magic here\n        });\n    }\n}\n\nFooComponent.contextTypes = {\n    getInstagramSdk: React.PropTypes.func\n};\n\n```\n",
+  "readmeFilename": "README.md",
+  "gitHead": "1f1d7781449ab06e730ee1ba57afb8a4c45e590d",
+  "_id": "fluxible-plugin-instagram@0.1.0",
+  "_shasum": "f83778cd0952da0e801a96831acc061441ac64e6",
+  "_from": "fluxible-plugin-instagram@*"
 }

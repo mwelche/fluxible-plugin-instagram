@@ -1,6 +1,6 @@
 'use strict';
 
-var instagramSdk = require('./lib/instagram-plugin');
+var getInstagramSdk = require('./lib/instagram-plugin');
 
 function instagramPlugin(options) {
     var options = options;
