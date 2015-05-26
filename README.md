@@ -2,13 +2,14 @@ Instagram SDK with Fluxible
 ==========================
 
 Plug & play the Instagram SDK into your Fluxible App!
-inspired by fluxible-plugin-facebook
+
+Inspired by fluxible-plugin-facebook
 
 Features
 --------
 
  * Works with webpack / browserify
- * Loads facebook SDK asynchronously (thanks to es6 Promises)
+ * Loads instagram SDK (from git fork) asynchronously (thanks to es6 Promises)
  * Shares configuration between server / client (means you can use environment variables)
  * Comes with a "do whatever you want" (MIT) license
  * Doesn't load SDK on server side
@@ -27,7 +28,6 @@ Add it to your fluxible context :
 import instagramPlugin from 'fluxible-plugin-instagram';
 
 app.plug(instagramPlugin({
-    /* https://developers.facebook.com/docs/javascript/reference/FB.init/v2.3 options */
     appId: 'xxx'
 }));
 
