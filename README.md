@@ -28,7 +28,7 @@ Add it to your fluxible context :
 import instagramPlugin from 'fluxible-plugin-instagram';
 
 app.plug(instagramPlugin({
-    appId: 'xxx'
+    appId: 'xxx' // client id
 }));
 
 ```
